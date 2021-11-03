@@ -9,7 +9,10 @@ todoList.addEventListener("click", deleteTodo);
 // Add todo Function
 function addTodo(e) {
     e.preventDefault();
-
+    if (todoInput.value === "") {
+        alert("You must enter a todo!");
+        return;
+    }
     // Todo Div
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
